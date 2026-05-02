@@ -1,0 +1,70 @@
+# 🌕 Vibe Coding Prompt — Lunar Explorer Interactive Exhibit (v2.0 - L.U.N.A Edition)
+
+> Copy and paste the following prompt directly into Antigravity to build the entire high-fidelity project from scratch.
+
+---
+
+## THE PROMPT
+
+Build me a stunning, "museum-grade" interactive educational exhibit called **"Lunar Explorer"**. It should feel like a premium, state-of-the-art sci-fi Mission Control terminal. Use only plain **HTML**, **CSS**, and **JavaScript** — no frameworks, no external APIs, no dependencies. Everything must run 100% offline.
+
+---
+
+### 🎨 Visual Design System (High Vibrancy)
+
+- **Theme**: Ultra-dark space aesthetic. Deep black background (`#05070a`) with high-contrast surfaces.
+- **Vibrant Palette**: 
+  - **Gold**: `#ffd54f` (Primary accent / Headlines)
+  - **Blue**: `#5bb8ff` (Earth / Secondary data)
+  - **Teal**: `#4eff9a` (L.U.N.A / Success)
+  - **Coral**: `#ff6b45` (Warnings / Error)
+  - **Lilac**: `#d8aaff` (Special facts)
+- **Typography**: Google Fonts — `Syne` (Heavy headings), `Space Mono` (Data labels), `DM Sans` (Clean body text).
+- **Glassmorphism**: Heavy use of `backdrop-filter: blur(12px)`, semi-transparent panels, and neon "inner-glow" borders.
+- **Background**: Dynamic starfield with ~180 twinkling stars and 3 large animated shooting stars using CSS transitions.
+
+---
+
+### 🏗️ Exhibit Architecture (The "Wow" Factor)
+
+1. **Fixed Navigation** — Sleek glass bar with a glowing moon pulse logo and smooth-scroll anchors.
+
+2. **Epic Two-Column Hero** — 
+   - **Left**: Massive holographic headline ("Humanity's Journey to the Moon") with a multi-stop color gradient and heavy drop-shadows. Subtitle and a glowing "Start Exploring" CTA.
+   - **Right**: A 650px wide high-fidelity Earth-Moon system. Use a local `earth.jpg` with a 3D rotation animation and a Moon that orbits on a tilted plane. 
+   - **L.U.N.A Badge**: A fixed top-right "L.U.N.A Showcase" badge that reveals technical system specs on hover.
+
+3. **Stats & Marquee** —
+   - Below the hero, a grid of 4 mission stats with large neon counters.
+   - **Ticker Strip**: A continuous scrolling marquee ticker between sections featuring mission highlights ("LUNA 2 IMPACTS SURFACE...", "APOLLO 11 LANDS...").
+
+4. **Interactive Timeline** — Vertical data-stream layout with alternating mission nodes. Each node features the year, agency badge, and 2-3 key technical highlights.
+
+5. **3D Mission Archive** — A responsive grid of glassmorphic cards. Use local `artemis.jpg` for the Artemis card. Implement a high-performance **3D Tilt effect** on hover using JS to calculate perspective rotations.
+
+6. **Gamified Quiz** — A premium quiz module with:
+   - Neon progress bar.
+   - Answer buttons with side-border status indicators.
+   - **Shake animation** for incorrect answers.
+   - 6/6 Perfect Score triggers a vibrant "Starburst" confetti effect.
+
+7. **The L.U.N.A Assistant** — 
+   - Floating pill-shaped button (`🎙️ L.U.N.A`) in the bottom-right with a teal neon pulse.
+   - Fixed terminal window with a holographic header showing "Lunar Universal Navigation Assistant" and a pulsing status dot.
+   - **Voice Engine**: Uses browser Web Speech API. 100% local keyword matching for 60+ lunar facts. 
+   - **TTS**: Premium female voice selection (Samantha/Google UK) with adjusted pitch (1.1) for a crisp digital feel. L.U.N.A must greet the user when first activated.
+
+---
+
+### 📡 Technical Data & Facts
+
+(Maintain the comprehensive mission data from 1959–2025+ and the 60+ entries in the knowledge base, including ISRO's Chandrayaan-3 and CNSA's Chang'e missions.)
+
+---
+
+### 📁 File Structure
+- `index.html`: Semantic structure, all textual content.
+- `style.css`: All layout, animations, neon effects, and glassmorphism.
+- `main.js`: Data structures (moonKnowledge), 3D tilt logic, voice engine, quiz logic, and ticker management.
+
+**Goal**: Deliver a jaw-dropping, premium educational experience that feels alive, interactive, and visually stunning at every scroll.

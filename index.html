@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore every Moon mission from 1959 to today — timelines, mission cards, fun facts and an interactive quiz. Built for curious minds aged 12+.">
+<title>Lunar Explorer — All Moon Expeditions</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="stars"></div>
+
+<!-- L.U.N.A Repositioned Badge -->
+<div class="luna-showcase">
+  <div class="luna-badge-ring"></div>
+  <div class="luna-badge-inner">
+    <div class="luna-icon">🌙</div>
+    <div class="luna-label">L.U.N.A</div>
+    <div class="luna-sub">Voice AI</div>
+    
+    <!-- Hover Details Panel -->
+    <div class="luna-details">
+      <div class="luna-details-title">System Specs</div>
+      <ul class="luna-specs">
+        <li><span>Protocol:</span> L.U.N.A v2.0</li>
+        <li><span>Engine:</span> Offline Keyword Heuristic</li>
+        <li><span>Interface:</span> Speech-to-Text & Synthetic Voice</li>
+        <li><span>Knowledge:</span> 100+ Lunar Facts</li>
+      </ul>
+      <div class="luna-hint">Click the mic in the corner to wake me up.</div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="moon-badge"></div>
+    Lunar Explorer
+  </div>
+  <ul class="nav-links">
+    <li><a href="#timeline" onclick="navTo('timeline');return false;">Timeline</a></li>
+    <li><a href="#missions" onclick="navTo('missions');return false;">Missions</a></li>
+    <li><a href="#facts" onclick="navTo('facts');return false;">Fun Facts</a></li>
+    <li><a href="#quiz" onclick="navTo('quiz');return false;">Quiz</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <!-- LEFT: Text content -->
+    <div class="hero-text">
+      <div class="hero-eyebrow">Interactive Space Explorer</div>
+      <h1>Humanity's<br>Journey to the <span>Moon</span></h1>
+      <p class="hero-sub">From the first robotic scouts to astronauts leaving bootprints on lunar soil — explore every mission that reached for the Moon.</p>
+      <a href="#timeline" class="hero-cta" onclick="navTo('timeline');return false;">Start Exploring ↓</a>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-n">100+</div><div class="hero-stat-l">Missions launched</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">12</div><div class="hero-stat-l">Humans on the Moon</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">7</div><div class="hero-stat-l">Nations involved</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">382 kg</div><div class="hero-stat-l">Moon rocks returned</div></div>
+      </div>
+    </div>
+    <!-- RIGHT: Earth-Moon animation -->
+    <div class="hero-visual">
+      <div class="hero-system">
+        <div class="hero-earth"></div>
+        <div class="hero-orbit-wrap">
+          <div class="hero-orbit">
+            <div class="hero-moon-container">
+              <div class="hero-moon-body"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-glow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE TICKER -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>🌕 Apollo 11 &mdash; First Moon Landing 1969</span>
+    <span>🛸 Luna 9 &mdash; First Soft Landing 1966</span>
+    <span>🌍 Chandrayaan-3 &mdash; South Pole 2023</span>
+    <span>🤖 Lunokhod 1 &mdash; First Rover 1970</span>
+    <span>🧑‍🚀 12 Humans Have Walked the Moon</span>
+    <span>📡 Chang'e 4 &mdash; Far Side 2019</span>
+    <span>🪨 382 kg of Moon Rocks Returned</span>
+    <span>💧 Water Ice at the Lunar Poles</span>
+    <span>🔭 Artemis &mdash; Next Giant Leap</span>
+    <span>🌕 Apollo 11 &mdash; First Moon Landing 1969</span>
+    <span>🛸 Luna 9 &mdash; First Soft Landing 1966</span>
+    <span>🌍 Chandrayaan-3 &mdash; South Pole 2023</span>
+    <span>🤖 Lunokhod 1 &mdash; First Rover 1970</span>
+    <span>🧑‍🚀 12 Humans Have Walked the Moon</span>
+    <span>📡 Chang'e 4 &mdash; Far Side 2019</span>
+    <span>🪨 382 kg of Moon Rocks Returned</span>
+    <span>💧 Water Ice at the Lunar Poles</span>
+    <span>🔭 Artemis &mdash; Next Giant Leap</span>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="section-inner">
+    <div class="section-label">Chronological History</div>
+    <h2>The race through time</h2>
+    <p class="section-intro">From 1959 to today — how humanity's exploration of the Moon unfolded decade by decade.</p>
+    <div class="tl-wrap">
+      <div class="tl-line"></div>
+      <div id="tl-items"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSIONS -->
+<section id="missions">
+  <div class="section-inner">
+    <div class="section-label">Mission Profiles</div>
+    <h2>Every major expedition</h2>
+    <p class="section-intro">Click any card to learn what made each mission special — the triumphs, the drama, and the discoveries.</p>
+    <div class="cards-grid" id="cards-grid"></div>
+  </div>
+</section>
+
+<!-- FACTS -->
+<section id="facts">
+  <div class="section-inner">
+    <div class="section-label">Did You Know?</div>
+    <h2>Mind-blowing Moon facts</h2>
+    <p class="section-intro">The Moon is stranger and more fascinating than you might think.</p>
+    <div class="facts-grid" id="facts-grid"></div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz">
+  <div class="section-inner">
+    <div class="section-label">Test Your Knowledge</div>
+    <h2>Moon mission quiz</h2>
+    <p class="section-intro">Six questions to test what you've learned. How well do you know the Moon?</p>
+    <div class="quiz-box">
+      <div class="quiz-progress"><div class="quiz-bar" id="qbar" style="width:0%"></div></div>
+      <div id="quiz-main">
+        <div class="quiz-q" id="q-text"></div>
+        <div class="quiz-opts" id="q-opts"></div>
+        <div class="quiz-feedback" id="q-feedback"></div>
+        <button class="quiz-next" id="q-next" onclick="nextQ()">Next question →</button>
+      </div>
+      <div class="quiz-score" id="quiz-score">
+        <div class="score-n" id="score-n"></div>
+        <div class="score-label" id="score-lbl"></div>
+        <button class="quiz-restart" onclick="startQuiz()">Try again</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Lunar Explorer · Built for curious minds everywhere · All mission data accurate as of 2024</p>
+  <p style="margin-top:6px">🌕 The Moon is about 384,400 km away — that's roughly 1.3 light-seconds!</p>
+</footer>
+
+<!-- AI ASSISTANT - L.U.N.A -->
+<div id="ai-assistant">
+  <div id="ai-terminal" class="hidden">
+    <div class="ai-header">
+      <div class="luna-header-info">
+        <span class="luna-status-dot"></span>
+        <div>
+          <div class="luna-header-name">L.U.N.A</div>
+          <div class="luna-header-full">Lunar Universal Navigation Assistant</div>
+        </div>
+      </div>
+      <button class="ai-minimize-btn" onclick="toggleMinimizeAI()" title="Minimize">&#8211;</button>
+    </div>
+    <div id="ai-log"></div>
+    <div id="ai-faq-container">
+      <div class="ai-faq-label">Quick Queries</div>
+      <div id="ai-faq-list"></div>
+    </div>
+  </div>
+  <button id="ai-mic-btn" onclick="toggleAI()" title="Talk to L.U.N.A">
+    <span class="luna-btn-icon">🎙️</span>
+    <span class="luna-btn-label">L.U.N.A</span>
+  </button>
+</div>
+
+
+
+<script src="main.js"></script>
+</body>
+</html>
